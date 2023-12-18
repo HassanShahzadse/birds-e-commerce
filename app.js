@@ -17,6 +17,12 @@ app.use('/product', productRoutes);
 const categoryRoutes = require('./routes/category');
 app.use('/categories', categoryRoutes);
 
+const cartRoutes = require('./routes/cart');
+app.use('/cart', cartRoutes);
+
+const orderRoutes = require('./routes/order');
+app.use('/order', orderRoutes);
+
 const port = process.env.SERVER_PORT;
 app.get("/",(res,resp)=>{
     resp.send("Home page");

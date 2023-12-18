@@ -11,6 +11,7 @@ const schema = Joi.object().keys({
   password: Joi.string().required(),
   firstName: Joi.string().required(),
   lastName: Joi.string().required(),
+  phone: Joi.string().required(),
   gender: Joi.string().required(),
 });
 
