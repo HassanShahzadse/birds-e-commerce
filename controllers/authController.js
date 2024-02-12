@@ -24,8 +24,10 @@ async function signup(req, res) {
 
     const { email, password } = value;
 
-    const existingUser = await User.findOne({ where: { email } });
-    if (existingUser) {
+    const existingUser = await User.findOne({ email });
+    console.log(existingUser, '-------------------');
+
+    if (existingUser !== null) {
       return res.status(409).json({ message: 'Email already exists' });
     }
 
@@ -34,19 +36,18 @@ async function signup(req, res) {
 
     // Create a new user
     const user = await User.create({
-   ...value,
+      ...value,
       password: hashedPassword,
       role: 'USER',
     });
 
-    return res
-      .status(201)
-      .json({ message: 'User created successfully', user });
+    return res.status(201).json({ message: 'User created successfully', user });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: 'Internal server error' });
   }
 }
+
 
 async function login(req, res) {
   try {

@@ -23,7 +23,8 @@ app.use('/cart', cartRoutes);
 const orderRoutes = require('./routes/order');
 app.use('/order', orderRoutes);
 
-const port = process.env.SERVER_PORT;
+//const port = process.env.SERVER_PORT;
+const port = 8000;
 app.get("/",(res,resp)=>{
     resp.send("Home page");
 });

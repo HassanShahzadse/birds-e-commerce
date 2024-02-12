@@ -4,13 +4,23 @@ const Category = require("../models/category");
 const createCategory = async (req, res) => {
   try {
     const { name } = req.body;
+
+    const existingCategory = await Category.findOne({ name });
+
+    if (existingCategory !== null) {
+      return res.status(409).json({ error: 'Category already exists' });
+    }
+
+    // Create a new category
     const category = await Category.create({ name });
+
     return res.status(201).json(category);
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ error: "Error creating category" });
+    return res.status(500).json({ error: 'Error creating category' });
   }
 };
+
 
 const getProductsByCategory = async (req, res) => {
   try {

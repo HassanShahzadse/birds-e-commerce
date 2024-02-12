@@ -29,6 +29,7 @@
     "node-cron": "^3.0.2",
     "node-schedule": "^2.1.1",
     "nodemon": "^2.0.22",
+    "nvm": "^0.0.4",
     "pg": "^8.11.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.32.1",
