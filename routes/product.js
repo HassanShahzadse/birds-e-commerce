@@ -21,6 +21,7 @@ const upload = multer({ storage: storage });
 
 router.post('/createProduct',requireAdmin,productController.createProduct);
 router.put('/updateProduct/:id',requireAdmin,productController.updateProduct);
+router.put('/updateProductInventory/:id',requireAdmin,productController.updateProductInventory);
 router.get('/getProduct/:id', productController.getProductById);
 router.get('/getAllProduct', productController.getAllProduct);
 router.get('/getAllProductByCategory/:categoryId', productController.getAllProductByCategory);

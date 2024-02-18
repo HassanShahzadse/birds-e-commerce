@@ -56,6 +56,29 @@ const orderController = {
       return res.status(500).json({ message: 'Internal server error.' });
     }
   },
+  getOrderById: async (req, res) => {
+    try {
+      const orderId = req.params.id;
+  
+      // Check if the order ID is valid
+      if (!mongoose.Types.ObjectId.isValid(orderId)) {
+        return res.status(400).json({ message: 'Invalid order ID.' });
+      }
+  
+      // Find the order by ID
+      const order = await Order.findOne({ _id: orderId, user: req.user.id }).populate('products.productId');
+  
+      // Check if the order exists
+      if (!order) {
+        return res.status(404).json({ message: 'Order not found.' });
+      }
+  
+      return res.status(200).json({ order });
+    } catch (error) {
+      console.error('Error getting order by ID:', error);
+      return res.status(500).json({ message: 'Internal server error.' });
+    }
+  },
 
   // Update order
   updateOrder: async (req, res) => {

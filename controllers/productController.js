@@ -48,6 +48,27 @@ async function updateProduct(req, res) {
     return res.status(500).json({ error: 'An error occurred while updating the product.' });
   }
 }
+async function updateProductInventory(req, res) {
+  try {
+    const { id } = req.params;
+    const { stock } = req.body;
+
+    const product = await Product.findByIdAndUpdate(
+      id,
+      { stock },
+      { new: true }
+    );
+
+    if (!product) {
+      return res.status(404).json({ error: 'Product not found' });
+    }
+
+    return res.json(product);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ error: 'An error occurred while updating the product.' });
+  }
+}
 
 async function getProductById(req, res) {
   try {
@@ -117,4 +138,5 @@ module.exports = {
   getAllProduct,
   getAllProductByCategory,
   deleteProductById,
+  updateProductInventory
 };

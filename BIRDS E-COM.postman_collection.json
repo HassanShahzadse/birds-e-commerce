@@ -25,12 +25,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/auth/signup",
-							"protocol": "http",
+							"raw": "{{url}}/auth/signup",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"auth",
 								"signup"
@@ -54,12 +52,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/auth/login",
-							"protocol": "http",
+							"raw": "{{url}}/auth/login",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"auth",
 								"login"
@@ -88,19 +84,91 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/product/createProduct",
-							"protocol": "http",
+							"raw": "{{url}}/product/createProduct",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"product",
 								"createProduct"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "CREATE PRODUCT",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Sample Product\",\r\n  \"description\": \"This is a sample product description.\",\r\n  \"price\": \"19.99\",\r\n  \"tags\": \"sample, test, product\",\r\n  \"stock\": \"100\",\r\n  \"categories\": [\"655d172ba2c7665f6dd3456f\"]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/product/createProduct",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"product",
+										"createProduct"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 19:58:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-Bz9r7yBNkVjdeDUGPwKjYMCf3i0\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Sample Product\",\n    \"description\": \"This is a sample product description.\",\n    \"price\": \"19.99\",\n    \"tags\": \"sample, test, product\",\n    \"stock\": \"100\",\n    \"categories\": [\n        \"655d172ba2c7665f6dd3456f\"\n    ],\n    \"_id\": \"65c13def8f213ec9e0a0ce58\",\n    \"__v\": 0\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE PRODUCT",
@@ -109,7 +177,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"Sample Product\",\r\n  \"description\": \"This is a sample product description.\",\r\n  \"price\": \"19.99\",\r\n  \"tags\": \"sample, test, product\",\r\n  \"stock\": \"100\"\r\n//   \"categories\": [\"655d172ba2c7665f6dd3456f\"]\r\n}\r\n",
+							"raw": "{\r\n  \"name\": \"Sample Product\",\r\n  \"description\": \"This is a sample product description.\",\r\n  \"price\": \"19.99\",\r\n  \"tags\": \"sample, test, product\",\r\n  \"stock\": \"100\",\r\n  \"categories\": [\"655d172ba2c7665f6dd3456f\"]\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -117,20 +185,188 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/product/updateProduct/655d18f7f424aad25b337e0d",
-							"protocol": "http",
+							"raw": "{{url}}/product/updateProduct/65c13a558f213ec9e0a0ce43",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"product",
 								"updateProduct",
-								"655d18f7f424aad25b337e0d"
+								"65c13a558f213ec9e0a0ce43"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "UPDATE PRODUCT",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Sample Product\",\r\n  \"description\": \"This is a sample product description.\",\r\n  \"price\": \"19.99\",\r\n  \"tags\": \"sample, test, product\",\r\n  \"stock\": \"100\",\r\n  \"categories\": [\"655d172ba2c7665f6dd3456f\"]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/product/updateProduct/65c13a558f213ec9e0a0ce43",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"product",
+										"updateProduct",
+										"65c13a558f213ec9e0a0ce43"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 19:58:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-3ngecfSJXPoKSUQzdWWdJy4BLFs\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"65c13a558f213ec9e0a0ce43\",\n    \"name\": \"Sample Product\",\n    \"description\": \"This is a sample product description.\",\n    \"price\": \"19.99\",\n    \"tags\": \"sample, test, product\",\n    \"stock\": \"100\",\n    \"categories\": [\n        \"655d172ba2c7665f6dd3456f\"\n    ],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE PRODUCT INVENTORY",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"stock\": \"10\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/product/updateProductInventory/65c13def8f213ec9e0a0ce58",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"updateProductInventory",
+								"65c13def8f213ec9e0a0ce58"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UPDATE PRODUCT INVENTORY",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"stock\": \"10\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/product/updateProductInventory/65c13def8f213ec9e0a0ce58",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"updateProductInventory",
+										"65c13def8f213ec9e0a0ce58"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "222"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"de-xyomx4kY8Gbq2/Jq7nV8MHHt8w0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 05:07:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"65c13def8f213ec9e0a0ce58\",\n    \"name\": \"Sample Product\",\n    \"description\": \"This is a sample product description.\",\n    \"price\": \"19.99\",\n    \"tags\": \"sample, test, product\",\n    \"stock\": \"10\",\n    \"categories\": [\n        \"655d172ba2c7665f6dd3456f\"\n    ],\n    \"__v\": 0\n}"
+						}
+					]
 				},
 				{
 					"name": "GET ALL PRODUCTS",
@@ -150,19 +386,91 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/product/getAllProduct",
-							"protocol": "http",
+							"raw": "{{url}}/product/getAllProduct",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"product",
 								"getAllProduct"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "GET ALL PRODUCTS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"john.doe@example.com\",\r\n  \"password\": \"securePassword123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/product/getAllProduct",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"product",
+										"getAllProduct"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 19:58:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "802"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"322-B4mC4XsGU48NPH0ElAsGQREn72Y\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"655d1c243b5f8fae26ba505c\",\n        \"name\": \"Sample Product\",\n        \"description\": \"This is a sample product description.\",\n        \"price\": \"19.99\",\n        \"tags\": \"sample, test, product\",\n        \"stock\": \"100\",\n        \"categories\": [\n            {\n                \"_id\": \"655d172ba2c7665f6dd3456f\",\n                \"name\": \"ABC\",\n                \"products\": [],\n                \"__v\": 0\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6579ea678059c0430612ecd0\",\n        \"name\": \"Sample Product\",\n        \"description\": \"This is a sample product description.\",\n        \"price\": \"19.99\",\n        \"tags\": \"sample, test, product\",\n        \"stock\": \"100\",\n        \"categories\": [\n            {\n                \"_id\": \"655d172ba2c7665f6dd3456f\",\n                \"name\": \"ABC\",\n                \"products\": [],\n                \"__v\": 0\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"65c13a558f213ec9e0a0ce43\",\n        \"name\": \"Sample Product\",\n        \"description\": \"This is a sample product description.\",\n        \"price\": \"19.99\",\n        \"tags\": \"sample, test, product\",\n        \"stock\": \"100\",\n        \"categories\": [\n            {\n                \"_id\": \"655d172ba2c7665f6dd3456f\",\n                \"name\": \"ABC\",\n                \"products\": [],\n                \"__v\": 0\n            }\n        ],\n        \"__v\": 0\n    }\n]"
+						}
+					]
 				},
 				{
 					"name": "DELETE PRODUCT",
@@ -179,20 +487,93 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/product/deleteProductById/655d1b33d7c64ab3b1dfec0b",
-							"protocol": "http",
+							"raw": "{{url}}/product/deleteProductById/65c13a558f213ec9e0a0ce43",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"product",
 								"deleteProductById",
-								"655d1b33d7c64ab3b1dfec0b"
+								"65c13a558f213ec9e0a0ce43"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "DELETE PRODUCT",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/product/deleteProductById/65c13a558f213ec9e0a0ce43",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"product",
+										"deleteProductById",
+										"65c13a558f213ec9e0a0ce43"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 19:58:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b-NjZOkvigPLx1AL2IjK+kgaAcMXk\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Product Deleted\"\n}"
+						}
+					]
 				},
 				{
 					"name": "GET PRODUCT BY ID",
@@ -212,20 +593,1157 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/product/getProduct/655d18f7f424aad25b337e0d",
-							"protocol": "http",
+							"raw": "{{url}}/product/getProduct/65c13def8f213ec9e0a0ce58",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"product",
 								"getProduct",
-								"655d18f7f424aad25b337e0d"
+								"65c13def8f213ec9e0a0ce58"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "GET PRODUCT BY ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"john.doe@example.com\",\r\n  \"password\": \"securePassword123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/product/getProduct/65c13def8f213ec9e0a0ce58",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"product",
+										"getProduct",
+										"65c13def8f213ec9e0a0ce58"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 19:58:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "266"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10a-FjgTmXBcRupK6gFqmGmC/Q4X/FA\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"65c13def8f213ec9e0a0ce58\",\n    \"name\": \"Sample Product\",\n    \"description\": \"This is a sample product description.\",\n    \"price\": \"19.99\",\n    \"tags\": \"sample, test, product\",\n    \"stock\": \"100\",\n    \"categories\": [\n        {\n            \"_id\": \"655d172ba2c7665f6dd3456f\",\n            \"name\": \"ABC\",\n            \"products\": [],\n            \"__v\": 0\n        }\n    ],\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ADMIN USER OPERATIONS",
+			"item": [
+				{
+					"name": "UPDATE USER",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"gender\": \"male\",\r\n  \"phone\": \"030469040\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/admin/updateUsers/6579e965dab85eb455dcb554",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"updateUsers",
+								"6579e965dab85eb455dcb554"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UPDATE USER",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"gender\": \"male\",\r\n  \"phone\": \"030469040\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/admin/updateUsers/6579e965dab85eb455dcb554",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"updateUsers",
+										"6579e965dab85eb455dcb554"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "229"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e5-23I5rGv2dCVZY4/4NCmiQfkK2nY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 04:57:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6579e965dab85eb455dcb554\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"admin@gmail.com\",\n    \"phone\": \"030469040\",\n    \"password\": \"$2b$10$Roy2VrWWAK51UKKBq9QMn.wICYK0dr9f7mDTx0sM1x4yy0PoIRCjO\",\n    \"role\": \"ADMIN\",\n    \"gender\": \"male\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE USER",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/admin/deleteUsers/655d15744f4b448a498563b0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"deleteUsers",
+								"655d15744f4b448a498563b0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE USER",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/admin/deleteUsers/655d15744f4b448a498563b0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"deleteUsers",
+										"655d15744f4b448a498563b0"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-FQSQB39WxFTtKvyiKML+XciKif0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 04:59:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User not found.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET USER BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/admin/getUserById/6579e965dab85eb455dcb554",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"getUserById",
+								"6579e965dab85eb455dcb554"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET USER BY ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/admin/getUserById/6579e965dab85eb455dcb554",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"getUserById",
+										"6579e965dab85eb455dcb554"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "229"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e5-23I5rGv2dCVZY4/4NCmiQfkK2nY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 04:58:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6579e965dab85eb455dcb554\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"admin@gmail.com\",\n    \"phone\": \"030469040\",\n    \"password\": \"$2b$10$Roy2VrWWAK51UKKBq9QMn.wICYK0dr9f7mDTx0sM1x4yy0PoIRCjO\",\n    \"role\": \"ADMIN\",\n    \"gender\": \"male\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "GET USERS ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/admin/getAllUsers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET USERS ALL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/admin/getAllUsers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"getAllUsers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "465"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d1-I6ncMnYTC/amksvTqJ1vRG2UJ8g\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 04:58:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6579e965dab85eb455dcb554\",\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"email\": \"admin@gmail.com\",\n        \"phone\": \"030469040\",\n        \"password\": \"$2b$10$Roy2VrWWAK51UKKBq9QMn.wICYK0dr9f7mDTx0sM1x4yy0PoIRCjO\",\n        \"role\": \"ADMIN\",\n        \"gender\": \"male\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"65c13bee8f213ec9e0a0ce47\",\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"email\": \"admin123@gmail.com\",\n        \"phone\": \"03046904670\",\n        \"password\": \"$2b$10$1CB7y7PJ0EOwx/2nJzxcs.ZRdMNuOP6tN2mfK.ncm6C.7Bj2BaLZe\",\n        \"role\": \"USER\",\n        \"gender\": \"male\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "REVIEW",
+			"item": [
+				{
+					"name": "CREATE REVIEW",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user\": \"6579e965dab85eb455dcb554\",\r\n  \"product\": \"65c13def8f213ec9e0a0ce58\",\r\n  \"rating\": 4,\r\n  \"comment\": \"This product is great! I highly recommend it.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/review/createReview",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"createReview"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CREATE REVIEW",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user\": \"6579e965dab85eb455dcb554\",\r\n  \"product\": \"65c13def8f213ec9e0a0ce58\",\r\n  \"rating\": 4,\r\n  \"comment\": \"This product is great! I highly recommend it.\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/review/createReview",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"review",
+										"createReview"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "288"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"120-ydFceSJltX9yL5d5azzpenAFR38\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 05:07:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"review\": {\n        \"user\": \"6579e965dab85eb455dcb554\",\n        \"product\": \"65c13def8f213ec9e0a0ce58\",\n        \"rating\": 4,\n        \"comment\": \"This product is great! I highly recommend it.\",\n        \"approved\": false,\n        \"_id\": \"65d190a40e757a93a67ab02b\",\n        \"createdAt\": \"2024-02-18T05:07:48.765Z\",\n        \"updatedAt\": \"2024-02-18T05:07:48.765Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE REVIEW",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rating\": 3,\r\n  \"comment\": \"This product is great! I highly recommend it.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/review/updateReview/65d0e5bd7d5ed16fa612fb15",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"updateReview",
+								"65d0e5bd7d5ed16fa612fb15"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UPDATE REVIEW",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"rating\": 3,\r\n  \"comment\": \"This product is great! I highly recommend it.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/review/updateReview/65d0e5bd7d5ed16fa612fb15",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"review",
+										"updateReview",
+										"65d0e5bd7d5ed16fa612fb15"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "288"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"120-WjcFgeM3fAAJueGuQKCns3mwmtc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 05:08:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"review\": {\n        \"_id\": \"65d0e5bd7d5ed16fa612fb15\",\n        \"user\": \"6579e965dab85eb455dcb554\",\n        \"product\": \"65c13def8f213ec9e0a0ce58\",\n        \"rating\": 3,\n        \"comment\": \"This product is great! I highly recommend it.\",\n        \"approved\": false,\n        \"createdAt\": \"2024-02-17T16:58:37.770Z\",\n        \"updatedAt\": \"2024-02-18T05:08:12.632Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "APPROVE REVIEW",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rating\": 3,\r\n  \"comment\": \"This product is great! I highly recommend it.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/review/approveReview/65d0e5bd7d5ed16fa612fb15",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"approveReview",
+								"65d0e5bd7d5ed16fa612fb15"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "APPROVE REVIEW",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"rating\": 3,\r\n  \"comment\": \"This product is great! I highly recommend it.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/review/approveReview/65d0e5bd7d5ed16fa612fb15",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"review",
+										"approveReview",
+										"65d0e5bd7d5ed16fa612fb15"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "287"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11f-la9Uy6nrOO89pxXvXKd1xszy2sY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 05:08:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"review\": {\n        \"_id\": \"65d0e5bd7d5ed16fa612fb15\",\n        \"user\": \"6579e965dab85eb455dcb554\",\n        \"product\": \"65c13def8f213ec9e0a0ce58\",\n        \"rating\": 3,\n        \"comment\": \"This product is great! I highly recommend it.\",\n        \"approved\": true,\n        \"createdAt\": \"2024-02-17T16:58:37.770Z\",\n        \"updatedAt\": \"2024-02-18T05:08:22.074Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET ALL REVIEWS OF  PRODUCT",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/review/getProductReviews/65c13def8f213ec9e0a0ce58",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"getProductReviews",
+								"65c13def8f213ec9e0a0ce58"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET ALL REVIEWS OF  PRODUCT",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/review/getProductReviews/65c13def8f213ec9e0a0ce58",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"review",
+										"getProductReviews",
+										"65c13def8f213ec9e0a0ce58"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12a-3NwGdglyF/HXXIL5b+LSa1KHaTs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 05:08:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"reviews\": [\n        {\n            \"_id\": \"65d0e5bd7d5ed16fa612fb15\",\n            \"user\": {\n                \"_id\": \"6579e965dab85eb455dcb554\"\n            },\n            \"product\": \"65c13def8f213ec9e0a0ce58\",\n            \"rating\": 3,\n            \"comment\": \"This product is great! I highly recommend it.\",\n            \"approved\": true,\n            \"createdAt\": \"2024-02-17T16:58:37.770Z\",\n            \"updatedAt\": \"2024-02-18T05:08:22.074Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE REVIEW",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/review/deleteReview/65d0e5bd7d5ed16fa612fb15",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"deleteReview",
+								"65d0e5bd7d5ed16fa612fb15"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE REVIEW",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/review/deleteReview/65d0e5bd7d5ed16fa612fb15",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"review",
+										"deleteReview",
+										"65d0e5bd7d5ed16fa612fb15"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-JtTV5/Y/edDhCQCUh0krXH+3A0o\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 05:09:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Review deleted successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET REVIEW BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/review/getReview/65d0e97cf8476a518d71320d",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"getReview",
+								"65d0e97cf8476a518d71320d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET REVIEW BY ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/review/getReview/65d0e97cf8476a518d71320d",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"review",
+										"getReview",
+										"65d0e97cf8476a518d71320d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "296"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"128-w7s1LtQOmRnVfsXMBjxQzRKuAM0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 05:10:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"review\": {\n        \"_id\": \"65d0e97cf8476a518d71320d\",\n        \"user\": {\n            \"_id\": \"6579e965dab85eb455dcb554\"\n        },\n        \"product\": \"65c13def8f213ec9e0a0ce58\",\n        \"rating\": 4,\n        \"comment\": \"This product is great! I highly recommend it.\",\n        \"approved\": false,\n        \"createdAt\": \"2024-02-17T17:14:36.658Z\",\n        \"updatedAt\": \"2024-02-17T17:14:36.658Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET ALL REVIEW ADMIN",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/review/getAllReviewsAdmin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review",
+								"getAllReviewsAdmin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET ALL REVIEW ADMIN",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/review/getAllReviewsAdmin",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"review",
+										"getAllReviewsAdmin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "977"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d1-qT3ZdNeYI+Rj8IcfZ1Z6rY6VMgA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 05:10:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"reviews\": [\n        {\n            \"_id\": \"65d0e97cf8476a518d71320d\",\n            \"user\": {\n                \"_id\": \"6579e965dab85eb455dcb554\"\n            },\n            \"product\": {\n                \"_id\": \"65c13def8f213ec9e0a0ce58\",\n                \"name\": \"Sample Product\",\n                \"description\": \"This is a sample product description.\",\n                \"price\": \"19.99\",\n                \"tags\": \"sample, test, product\",\n                \"stock\": \"10\",\n                \"categories\": [\n                    \"655d172ba2c7665f6dd3456f\"\n                ],\n                \"__v\": 0\n            },\n            \"rating\": 4,\n            \"comment\": \"This product is great! I highly recommend it.\",\n            \"approved\": false,\n            \"createdAt\": \"2024-02-17T17:14:36.658Z\",\n            \"updatedAt\": \"2024-02-17T17:14:36.658Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65d190a40e757a93a67ab02b\",\n            \"user\": {\n                \"_id\": \"6579e965dab85eb455dcb554\"\n            },\n            \"product\": {\n                \"_id\": \"65c13def8f213ec9e0a0ce58\",\n                \"name\": \"Sample Product\",\n                \"description\": \"This is a sample product description.\",\n                \"price\": \"19.99\",\n                \"tags\": \"sample, test, product\",\n                \"stock\": \"10\",\n                \"categories\": [\n                    \"655d172ba2c7665f6dd3456f\"\n                ],\n                \"__v\": 0\n            },\n            \"rating\": 4,\n            \"comment\": \"This product is great! I highly recommend it.\",\n            \"approved\": false,\n            \"createdAt\": \"2024-02-18T05:07:48.765Z\",\n            \"updatedAt\": \"2024-02-18T05:07:48.765Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
 				}
 			]
 		},
@@ -239,7 +1757,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"productId\": \"655d1c243b5f8fae26ba505c\",\r\n  \"quantity\": 1\r\n}",
+							"raw": "{\r\n  \"productId\": \"65c13def8f213ec9e0a0ce58\",\r\n  \"quantity\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -247,19 +1765,95 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/cart/addItemInCart",
+							"raw": "http://89.116.34.90/cart/addItemInCart",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"89",
+								"116",
+								"34",
+								"90"
 							],
-							"port": "8000",
 							"path": [
 								"cart",
 								"addItemInCart"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "ADD ITEM IN CART",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"productId\": \"65c13def8f213ec9e0a0ce58\",\r\n  \"quantity\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/cart/addItemInCart",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"cart",
+										"addItemInCart"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 20:00:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "220"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dc-RSs53g6uyX6JSXpViZmnd/VZk6M\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Item added to the cart\",\n    \"cart\": {\n        \"_id\": \"6579ef10835f56fa74fe2bb6\",\n        \"user\": \"6579e965dab85eb455dcb554\",\n        \"products\": [\n            {\n                \"productId\": \"65c13def8f213ec9e0a0ce58\",\n                \"quantity\": 1,\n                \"_id\": \"65c13e5b8f213ec9e0a0ce5f\"\n            }\n        ],\n        \"__v\": 5\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE PRODUCT",
@@ -276,19 +1870,95 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/cart/updateCart",
+							"raw": "http://89.116.34.90/cart/updateCart",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"89",
+								"116",
+								"34",
+								"90"
 							],
-							"port": "8000",
 							"path": [
 								"cart",
 								"updateCart"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "UPDATE PRODUCT",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"products\": [\r\n    {\r\n      \"productId\": \"6579ea678059c0430612ecd0\",\r\n      \"quantity\": 3\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/cart/updateCart",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"cart",
+										"updateCart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 20:00:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-7odMqO+mpaV1OKbXoxdg0FnLRT0\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Cart updated successfully\",\n    \"cart\": {\n        \"_id\": \"6579ef10835f56fa74fe2bb6\",\n        \"user\": \"6579e965dab85eb455dcb554\",\n        \"products\": [\n            {\n                \"productId\": \"6579ea678059c0430612ecd0\",\n                \"quantity\": 3,\n                \"_id\": \"65c13e6f8f213ec9e0a0ce62\"\n            }\n        ],\n        \"__v\": 5\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "GET MY CART PRODUCTS",
@@ -308,19 +1978,95 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/cart/getCartItems",
+							"raw": "http://89.116.34.90/cart/getCartItems",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"89",
+								"116",
+								"34",
+								"90"
 							],
-							"port": "8000",
 							"path": [
 								"cart",
 								"getCartItems"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "GET MY CART PRODUCTS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"john.doe@example.com\",\r\n  \"password\": \"securePassword123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/cart/getCartItems",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"cart",
+										"getCartItems"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 20:01:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "233"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e9-DgCR+pHhmdy7JxWDywQNDmJgAV4\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cart\": {\n        \"_id\": \"6579ef10835f56fa74fe2bb6\",\n        \"user\": \"6579e965dab85eb455dcb554\",\n        \"products\": [\n            {\n                \"productId\": {\n                    \"_id\": \"6579ea678059c0430612ecd0\",\n                    \"name\": \"Sample Product\",\n                    \"price\": \"19.99\"\n                },\n                \"quantity\": 3,\n                \"_id\": \"65c13e6f8f213ec9e0a0ce62\"\n            }\n        ],\n        \"__v\": 5\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "REMOVE PRODUCT FROM CART",
@@ -337,12 +2083,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/cart/removeItemFromCart/6579ea678059c0430612ecd0",
+							"raw": "http://89.116.34.90/cart/removeItemFromCart/6579ea678059c0430612ecd0",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"89",
+								"116",
+								"34",
+								"90"
 							],
-							"port": "8000",
 							"path": [
 								"cart",
 								"removeItemFromCart",
@@ -350,7 +2098,82 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "REMOVE PRODUCT FROM CART",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/cart/removeItemFromCart/6579ea678059c0430612ecd0",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"cart",
+										"removeItemFromCart",
+										"6579ea678059c0430612ecd0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 20:01:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "138"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8a-HOhVgTRh2lc0iyLEgYNjujmAjW4\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Item removed from the cart\",\n    \"cart\": {\n        \"_id\": \"6579ef10835f56fa74fe2bb6\",\n        \"user\": \"6579e965dab85eb455dcb554\",\n        \"products\": [],\n        \"__v\": 6\n    }\n}"
+						}
+					]
 				}
 			]
 		},
@@ -429,19 +2252,78 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/order/createOrder",
-							"protocol": "http",
+							"raw": "{{url}}/order/createOrder",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"order",
 								"createOrder"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "CREATE ORDERS Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://89.116.34.90/order/createOrder",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"order",
+										"createOrder"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 20:07:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-186PYsfRI54rFI0WvpveJgFPDaI\""
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Cart is empty. Add items to the cart before creating an order.\"\n}"
+						}
+					]
 				},
 				{
 					"name": "GET ALL ORDERS",
@@ -461,19 +2343,189 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/order/getOrder",
-							"protocol": "http",
+							"raw": "{{url}}/order/getOrder",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"order",
 								"getOrder"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "GET ALL ORDERS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/order/getOrder",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"order",
+										"getOrder"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 20:02:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "849"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"351-DJ87ynKwf8dHXEI0bFEqoEtH9x8\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"orders\": [\n        {\n            \"_id\": \"65808e4089e102e44d15321f\",\n            \"user\": \"6579e965dab85eb455dcb554\",\n            \"products\": [\n                {\n                    \"productId\": {\n                        \"_id\": \"655d1c243b5f8fae26ba505c\",\n                        \"name\": \"Sample Product\",\n                        \"description\": \"This is a sample product description.\",\n                        \"price\": \"19.99\",\n                        \"tags\": \"sample, test, product\",\n                        \"stock\": \"100\",\n                        \"categories\": [\n                            \"655d172ba2c7665f6dd3456f\"\n                        ],\n                        \"__v\": 0\n                    },\n                    \"quantity\": 2,\n                    \"_id\": \"6579f8f09000c081eeea80b2\"\n                }\n            ],\n            \"totalPrice\": 139.92999999999998,\n            \"status\": \"pending\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65808e8089e102e44d153233\",\n            \"user\": \"6579e965dab85eb455dcb554\",\n            \"products\": [\n                {\n                    \"productId\": {\n                        \"_id\": \"655d1c243b5f8fae26ba505c\",\n                        \"name\": \"Sample Product\",\n                        \"description\": \"This is a sample product description.\",\n                        \"price\": \"19.99\",\n                        \"tags\": \"sample, test, product\",\n                        \"stock\": \"100\",\n                        \"categories\": [\n                            \"655d172ba2c7665f6dd3456f\"\n                        ],\n                        \"__v\": 0\n                    },\n                    \"quantity\": 1,\n                    \"_id\": \"65808e7c89e102e44d15322d\"\n                }\n            ],\n            \"totalPrice\": 19.99,\n            \"status\": \"confirm\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GET SPECIFIC ORDER",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/order/getOrderById/65808e4089e102e44d15321f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"getOrderById",
+								"65808e4089e102e44d15321f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET SPECIFIC ORDER",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/order/getOrderById/65808e4089e102e44d15321f",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"getOrderById",
+										"65808e4089e102e44d15321f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "434"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b2-7GKITIzxFQbtHQ7lWCwlkxJ6KQA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Feb 2024 05:11:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"order\": {\n        \"_id\": \"65808e4089e102e44d15321f\",\n        \"user\": \"6579e965dab85eb455dcb554\",\n        \"products\": [\n            {\n                \"productId\": {\n                    \"_id\": \"655d1c243b5f8fae26ba505c\",\n                    \"name\": \"Sample Product\",\n                    \"description\": \"This is a sample product description.\",\n                    \"price\": \"19.99\",\n                    \"tags\": \"sample, test, product\",\n                    \"stock\": \"100\",\n                    \"categories\": [\n                        \"655d172ba2c7665f6dd3456f\"\n                    ],\n                    \"__v\": 0\n                },\n                \"quantity\": 2,\n                \"_id\": \"6579f8f09000c081eeea80b2\"\n            }\n        ],\n        \"totalPrice\": 139.92999999999998,\n        \"status\": \"pending\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE ORDER STATUS",
@@ -490,19 +2542,91 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/order/updateOrderStatus",
-							"protocol": "http",
+							"raw": "{{url}}/order/updateOrderStatus",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"order",
 								"updateOrderStatus"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "UPDATE ORDER STATUS",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\":\"65808e8089e102e44d153233\",\r\n    \"status\":\"confirm\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/order/updateOrderStatus",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"order",
+										"updateOrderStatus"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 20:02:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "468"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d4-E+hI2Cu3brLtnIykNl46iy6ealg\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order status updated successfully.\",\n    \"order\": {\n        \"_id\": \"65808e8089e102e44d153233\",\n        \"user\": \"6579e965dab85eb455dcb554\",\n        \"products\": [\n            {\n                \"productId\": {\n                    \"_id\": \"655d1c243b5f8fae26ba505c\",\n                    \"name\": \"Sample Product\",\n                    \"description\": \"This is a sample product description.\",\n                    \"price\": \"19.99\",\n                    \"tags\": \"sample, test, product\",\n                    \"stock\": \"100\",\n                    \"categories\": [\n                        \"655d172ba2c7665f6dd3456f\"\n                    ],\n                    \"__v\": 0\n                },\n                \"quantity\": 1,\n                \"_id\": \"65808e7c89e102e44d15322d\"\n            }\n        ],\n        \"totalPrice\": 19.99,\n        \"status\": \"confirm\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "UPDATE ORDER",
@@ -511,7 +2635,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"orderId\": \"65808e4089e102e44d15321f\",\r\n    \"productId\": \"655d1c243b5f8fae26ba505c\",\r\n    \"quantity\": 2\r\n                    \r\n}",
+							"raw": "{\r\n    \"orderId\": \"65808e4089e102e44d15321f\",\r\n    \"productId\": \"655d1c243b5f8fae26ba505c\",\r\n    \"quantity\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -519,19 +2643,91 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/order/updateOrder",
-							"protocol": "http",
+							"raw": "{{url}}/order/updateOrder",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"order",
 								"updateOrder"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "UPDATE ORDER",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderId\": \"65808e4089e102e44d15321f\",\r\n    \"productId\": \"655d1c243b5f8fae26ba505c\",\r\n    \"quantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/order/updateOrder",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"order",
+										"updateOrder"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 20:03:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "474"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1da-aTKgXSnG+zw03CrYY3MJM8S9xlg\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order updated successfully.\",\n    \"order\": {\n        \"_id\": \"65808e4089e102e44d15321f\",\n        \"user\": \"6579e965dab85eb455dcb554\",\n        \"products\": [\n            {\n                \"productId\": {\n                    \"_id\": \"655d1c243b5f8fae26ba505c\",\n                    \"name\": \"Sample Product\",\n                    \"description\": \"This is a sample product description.\",\n                    \"price\": \"19.99\",\n                    \"tags\": \"sample, test, product\",\n                    \"stock\": \"100\",\n                    \"categories\": [\n                        \"655d172ba2c7665f6dd3456f\"\n                    ],\n                    \"__v\": 0\n                },\n                \"quantity\": 2,\n                \"_id\": \"6579f8f09000c081eeea80b2\"\n            }\n        ],\n        \"totalPrice\": 139.92999999999998,\n        \"status\": \"pending\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
 				}
 			]
 		},
@@ -553,19 +2749,95 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/categories/createCategories",
+							"raw": "http://89.116.34.90/categories/createCategories",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"89",
+								"116",
+								"34",
+								"90"
 							],
-							"port": "8000",
 							"path": [
 								"categories",
 								"createCategories"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "CREATE Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"ABC\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/categories/createCategories",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"categories",
+										"createCategories"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 20:05:38 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23-8CsW087v02vvlBWtfSO2hPB8srs\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Category already exists\"\n}"
+						}
+					]
 				},
 				{
 					"name": "GET ALL Category",
@@ -585,19 +2857,95 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/categories/categories",
+							"raw": "http://89.116.34.90/categories/categories",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"89",
+								"116",
+								"34",
+								"90"
 							],
-							"port": "8000",
 							"path": [
 								"categories",
 								"categories"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "GET ALL Category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"ABC\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/categories/categories",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"categories",
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 20:05:55 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"47-kUzIDYdd5Hoa3ixCW+pmb30qLy0\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"655d172ba2c7665f6dd3456f\",\n        \"name\": \"ABC\",\n        \"products\": [],\n        \"__v\": 0\n    }\n]"
+						}
+					]
 				},
 				{
 					"name": "GET CATEGORY BY ID",
@@ -630,7 +2978,82 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "GET CATEGORY BY ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"ABC\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/categories/categories/655d172ba2c7665f6dd3456f",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"categories",
+										"categories",
+										"655d172ba2c7665f6dd3456f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 19:43:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "69"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"45-fGwy2QlzSAk+h2xv+3e3OKECoHI\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"655d172ba2c7665f6dd3456f\",\n    \"name\": \"ABC\",\n    \"products\": [],\n    \"__v\": 0\n}"
+						}
+					]
 				},
 				{
 					"name": "get Product by Category",
@@ -650,12 +3073,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/product/getAllProductByCategory/655d172ba2c7665f6dd3456f",
+							"raw": "http://89.116.34.90/product/getAllProductByCategory/655d172ba2c7665f6dd3456f",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"89",
+								"116",
+								"34",
+								"90"
 							],
-							"port": "8000",
 							"path": [
 								"product",
 								"getAllProductByCategory",
@@ -663,7 +3088,82 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "get Product by Category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://89.116.34.90/product/getAllProductByCategory/655d172ba2c7665f6dd3456f",
+									"protocol": "http",
+									"host": [
+										"89",
+										"116",
+										"34",
+										"90"
+									],
+									"path": [
+										"product",
+										"getAllProductByCategory",
+										"655d172ba2c7665f6dd3456f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 05 Feb 2024 20:06:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.52 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "802"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"322-8VqcZkzQHo9nJaZ37Jn8VFHrjTM\""
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"655d1c243b5f8fae26ba505c\",\n        \"name\": \"Sample Product\",\n        \"description\": \"This is a sample product description.\",\n        \"price\": \"19.99\",\n        \"tags\": \"sample, test, product\",\n        \"stock\": \"100\",\n        \"categories\": [\n            {\n                \"_id\": \"655d172ba2c7665f6dd3456f\",\n                \"name\": \"ABC\",\n                \"products\": [],\n                \"__v\": 0\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6579ea678059c0430612ecd0\",\n        \"name\": \"Sample Product\",\n        \"description\": \"This is a sample product description.\",\n        \"price\": \"19.99\",\n        \"tags\": \"sample, test, product\",\n        \"stock\": \"100\",\n        \"categories\": [\n            {\n                \"_id\": \"655d172ba2c7665f6dd3456f\",\n                \"name\": \"ABC\",\n                \"products\": [],\n                \"__v\": 0\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"65c13def8f213ec9e0a0ce58\",\n        \"name\": \"Sample Product\",\n        \"description\": \"This is a sample product description.\",\n        \"price\": \"19.99\",\n        \"tags\": \"sample, test, product\",\n        \"stock\": \"100\",\n        \"categories\": [\n            {\n                \"_id\": \"655d172ba2c7665f6dd3456f\",\n                \"name\": \"ABC\",\n                \"products\": [],\n                \"__v\": 0\n            }\n        ],\n        \"__v\": 0\n    }\n]"
+						}
+					]
 				}
 			]
 		}
@@ -673,7 +3173,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTc5ZTk2NWRhYjg1ZWI0NTVkY2I1NTQiLCJpYXQiOjE3MDI5MjM4MTQsImV4cCI6MTcwMzAxMDIxNH0.5qytqntnaYLNfG5bk7H6L86lz0zK5Rlw1ToYN49j_gA",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTc5ZTk2NWRhYjg1ZWI0NTVkY2I1NTQiLCJpYXQiOjE3MDgxODIwMDMsImV4cCI6MTcwODI2ODQwM30._FefmMax38HC-VJrdIXpoG35v3z7n_-bF0p8KrWwub0",
 				"type": "string"
 			}
 		]
@@ -696,6 +3196,18 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://89.116.34.90",
+			"disabled": true
+		},
+		{
+			"key": "url",
+			"value": "http://localhost:8000",
+			"type": "string"
 		}
 	]
 }

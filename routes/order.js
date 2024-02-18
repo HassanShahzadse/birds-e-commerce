@@ -8,6 +8,7 @@ router.post('/createOrder', requireUser, orderController.createOrder);
 
 // Get cart items
 router.get('/getOrder', requireUser, orderController.getOrder);
+router.get('/getOrderById/:id', requireUser, orderController.getOrderById);
 
 // Update cart
 router.put('/updateOrder', requireUser, orderController.updateOrder);
