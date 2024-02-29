@@ -17,7 +17,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"Qwerty@123\",\r\n  \"gender\": \"male\",\r\n  \"phone\": \"03046904690\"\r\n}\r\n",
+							"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"email\": \"admn12@gmail.com\",\r\n  \"password\": \"Qwerty@123\",\r\n  \"gender\": \"male\",\r\n  \"phone\": \"030694690\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -44,7 +44,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"Qwerty@123\"\r\n}\r\n",
+							"raw": "{\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"Qwerty@1234\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -59,6 +59,60 @@
 							"path": [
 								"auth",
 								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESEND VERIFICATION EMAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"admin@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/resend-verify-email",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"resend-verify-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESET PASSWORD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"admin@gmail.com\",\r\n  \"newPassword\": \"Qwerty@1234\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/reset-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"reset-password"
 							]
 						}
 					},
@@ -3173,7 +3227,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTc5ZTk2NWRhYjg1ZWI0NTVkY2I1NTQiLCJpYXQiOjE3MDgxODIwMDMsImV4cCI6MTcwODI2ODQwM30._FefmMax38HC-VJrdIXpoG35v3z7n_-bF0p8KrWwub0",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTc5ZTk2NWRhYjg1ZWI0NTVkY2I1NTQiLCJpYXQiOjE3MDkyMjY1NDksImV4cCI6MTcwOTMxMjk0OX0.jv4GcKA5Pny7sNBe0jrUkrulUI7CldOYAlbbOXLCulE",
 				"type": "string"
 			}
 		]
